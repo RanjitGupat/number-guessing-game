@@ -14,7 +14,7 @@ I built this project to practice Python logic and learn how to connect a Python/
 
 Replace the link above with your deployed Render URL.
 
-## 📸 Screenshots
+## Screenshots
 
 ### Start Game
 
@@ -22,7 +22,7 @@ Replace the link above with your deployed Render URL.
 
 ### Winning Screen
 
-![Number Guessing Game - Win](game-win.png)
+![Number Guessing Game - Win](image/win-game.png)
 
 ## Features
 
