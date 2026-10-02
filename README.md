@@ -18,7 +18,7 @@ Replace the link above with your deployed Render URL.
 
 ### Start Game
 
-![Number Guessing Game - Start](game-start.png)
+![Number Guessing Game - Start](image/start-game.png)
 
 ### Winning Screen
 
