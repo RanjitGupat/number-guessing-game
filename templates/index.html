@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Number Guessing Game</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <main class="page">
+
+        <div class="game-card">
+
+            <!-- Header -->
+
+            <div class="header">
+
+                <div class="game-icon">
+                    
+                </div>
+
+                <h1>Number Guessing</h1>
+
+                <p>
+                    Guess the secret number between
+                    <strong>1 and 100</strong>
+                </p>
+
+            </div>
+
+
+            <!-- Stats -->
+
+            <div class="stats">
+
+                <div class="stat-box">
+
+                    <span class="stat-icon">Start</span>
+
+                    <div>
+                        <small>ATTEMPTS</small>
+                        <strong>{{ attempts }}</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="stat-box">
+
+                    <span class="stat-icon">Win</span>
+
+                    <div>
+                        <small>SCORE</small>
+                        <strong>{{ score }}</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Message -->
+
+            <div class="message
+                {% if game_over %}
+                    success
+                {% elif attempts > 0 %}
+                    warning
+                {% endif %}
+            ">
+
+                {{ message }}
+
+            </div>
+
+
+            <!-- Guess Form -->
+
+            {% if not game_over %}
+
+            <form method="POST" class="guess-form">
+
+                <label for="guess">
+                    Enter your guess
+                </label>
+
+                <input
+                    type="number"
+                    id="guess"
+                    name="guess"
+                    min="1"
+                    max="100"
+                    placeholder="Enter 1 - 100"
+                    required
+                    autofocus
+                >
+
+                <button
+                    type="submit"
+                    name="action"
+                    value="guess"
+                    class="guess-button">
+
+                    Make a Guess 
+
+                </button>
+
+            </form>
+
+            {% else %}
+
+            <div class="winner">
+
+                <div class="winner-icon">
+                    
+                </div>
+
+                <h2>You Won!</h2>
+
+                <p>
+                    Great job! You found the secret number.
+                </p>
+
+            </div>
+
+            {% endif %}
+
+
+            <!-- New Game -->
+
+            <form method="POST">
+
+                <button
+                    type="submit"
+                    name="action"
+                    value="restart"
+                    class="restart-button">
+
+                    New Game
+
+                </button>
+
+            </form>
+
+
+            <!-- Footer -->
+
+            <div class="footer">
+
+                <span>Python</span>
+                <span>•</span>
+                <span>Flask</span>
+                <span>•</span>
+                <span>HTML & CSS</span>
+
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+
+</html>

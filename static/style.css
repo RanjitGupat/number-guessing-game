@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Inter,
+        Arial,
+        sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #141e30,
+            #243b55
+        );
+
+    color: #ffffff;
+}
+
+
+/* Page */
+
+.page {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 25px;
+}
+
+
+/* Game Card */
+
+.game-card {
+    width: 100%;
+    max-width: 480px;
+
+    padding: 38px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 24px;
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.35);
+
+    text-align: center;
+}
+
+
+/* Header */
+
+.game-icon {
+    width: 75px;
+    height: 75px;
+
+    margin: auto;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    font-size: 38px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+}
+
+
+h1 {
+    margin-top: 18px;
+
+    font-size: 32px;
+
+    letter-spacing: -0.5px;
+}
+
+
+.header p {
+    margin-top: 10px;
+
+    color: #cbd5e1;
+
+    line-height: 1.6;
+}
+
+
+/* Stats */
+
+.stats {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+
+.stat-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 16px;
+
+    text-align: left;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+
+.stat-icon {
+    font-size: 25px;
+}
+
+
+.stat-box small {
+    display: block;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+
+.stat-box strong {
+    display: block;
+
+    margin-top: 4px;
+
+    font-size: 22px;
+}
+
+
+/* Message */
+
+.message {
+    margin-top: 25px;
+
+    padding: 16px;
+
+    border-radius: 12px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    color: #e2e8f0;
+
+    font-weight: 600;
+}
+
+
+.message.warning {
+    background: rgba(245, 158, 11, 0.15);
+
+    color: #fbbf24;
+}
+
+
+.message.success {
+    background: rgba(34, 197, 94, 0.15);
+
+    color: #4ade80;
+}
+
+
+/* Form */
+
+.guess-form {
+    margin-top: 25px;
+
+    text-align: left;
+}
+
+
+.guess-form label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+input {
+    width: 100%;
+
+    padding: 16px;
+
+    border: 2px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 12px;
+
+    outline: none;
+
+    background: rgba(0, 0, 0, 0.2);
+
+    color: white;
+
+    font-size: 18px;
+
+    text-align: center;
+
+    transition: 0.2s;
+}
+
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+
+input:focus {
+    border-color: #818cf8;
+}
+
+
+/* Buttons */
+
+button {
+    width: 100%;
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 15px;
+
+    margin-top: 14px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.guess-button {
+    background: #6366f1;
+
+    color: white;
+
+    box-shadow:
+        0 8px 20px rgba(99, 102, 241, 0.3);
+}
+
+
+.guess-button:hover {
+    background: #4f46e5;
+
+    transform: translateY(-2px);
+}
+
+
+.restart-button {
+    margin-top: 20px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    color: #e2e8f0;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+
+.restart-button:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
+
+/* Winner */
+
+.winner {
+    margin-top: 25px;
+
+    padding: 25px;
+
+    border-radius: 15px;
+
+    background: rgba(34, 197, 94, 0.1);
+}
+
+
+.winner-icon {
+    font-size: 45px;
+}
+
+
+.winner h2 {
+    margin-top: 8px;
+
+    color: #4ade80;
+}
+
+
+.winner p {
+    margin-top: 8px;
+
+    color: #cbd5e1;
+}
+
+
+/* Footer */
+
+.footer {
+    margin-top: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+/* Mobile */
+
+@media (max-width: 520px) {
+
+    .page {
+        padding: 15px;
+    }
+
+    .game-card {
+        padding: 28px 20px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .stats {
+        gap: 10px;
+    }
+
+}
